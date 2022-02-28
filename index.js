@@ -12,5 +12,27 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(function(elem){
+    return elem.split(" ").map(function(elem){
+      return elem.replace(elem[0], elem[0].toUpperCase())
+    }).join(" ")
+  })
 }
+
+// function titleCased(){
+//   return tutorials.map(function (elem){
+//     return elem.toLowerCase().split(' ').map(function(elem){
+//       return elem.replace(elem[0], elem[0].toUpperCase())
+//     }).join(' ')
+//   })
+// }
+
+// function titleCased(){
+//   return tutorials.map(function (elem){
+//     return elem.toLowerCase().split(' ').map(function(elem){
+//       return elem.replace(elem[0], elem[0].toUpperCase())
+//     }).join(' ')
+//   })
+// }
+
+// titleCased()
